@@ -38,13 +38,26 @@ public class WinScreenManager : MonoBehaviour
 
     public IEnumerator Sleep(float delay)
     {
-        Debug.Log("Sleep started..");
-
+        // wait for x amount of seconds
         yield return new WaitForSeconds(delay);
 
+        // get this scene
         Scene t_thisScene = SceneManager.GetActiveScene();
 
-        Debug.Log("It has been " + delay + " seconds!");
+        // check if the next scene is valid
+        if (SceneManager.sceneCountInBuildSettings > t_thisScene.buildIndex+1)
+        {
+            // if the next scene is valid then load it
+            SceneManager.LoadScene(t_thisScene.buildIndex + 1);
+        }
+        else
+        {
+            // if the next scene is not valid then load the main menu (the scene at index 0 is guarenteed to be there).
+            Debug.Log("<color=red>ERROR: no next scene found.. loading main menu instead.. </color>");
+            SceneManager.LoadScene(0);
+        }
+
+        //SceneManager.LoadScene(t_thisScene.buildIndex + 1);
     }
     public IEnumerator Sleep(float delay, string name)
     {
