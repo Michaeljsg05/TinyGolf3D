@@ -100,6 +100,7 @@ public class CameraManager : MonoBehaviour
             {
                 // if inside distance zoom back into original zoom
                 mainLevelCamera.orthographicSize = Mathf.Lerp(mainLevelCamera.orthographicSize, originalSize, Time.deltaTime * zoomSmooth);
+                transform.position = Vector3.Lerp(transform.position, levelManager.hole.transform.position, Time.deltaTime / 2);
             }
         }
     }

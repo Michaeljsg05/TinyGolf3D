@@ -5,16 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 9472aa5a3c464a448b107784daca1629
   - enabled: 1
-    path: Assets/Scenes/Golf_Testing.unity
+    path: Assets/Scenes/Level01.unity
     guid: 9d3a1a6084cc31b45ae2ba63fe299ff0
   - enabled: 1
-    path: Assets/Scenes/Golf_testing_2.unity
-    guid: ac408f8b8085cad4eacf8c4508694e2a
+    path: Assets/Scenes/Level02.unity
+    guid: ec75d6b5e321b684d8ef17e0b9179ccf
   m_configObjects: {}

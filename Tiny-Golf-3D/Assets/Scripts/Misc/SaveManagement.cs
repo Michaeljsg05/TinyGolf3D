@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Runtime.Serialization;
 using System.IO;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 
 /*! 
@@ -13,6 +14,8 @@ using UnityEngine.SceneManagement;
  *  \version   1.1a
  *  \date      19/11/20
  */
+
+
 
 public class SaveManagement : MonoBehaviour
 {
@@ -24,7 +27,6 @@ public class SaveManagement : MonoBehaviour
    *  
    *  -- BASIC: InitFiles takes care of file set up and makes sure client can find files.
    */
-
     public List<string> levels;
     string levelPath;
 
@@ -62,12 +64,12 @@ public class SaveManagement : MonoBehaviour
                     // first time setup so lock all levels but level one
                     if (i == 1) // levl 1
                     {
-                        string t_content = "Level " + i + " = true\n";
+                        string t_content = "Level " + i + " = true BestScore = none \n";
                         File.AppendAllText(levelDataPath, t_content);
                     }
                     else if (i != 0)
                     {
-                        string t_content = "Level " + i + " = false\n";
+                        string t_content = "Level " + i + " = false BestScore = none \n";
                         File.AppendAllText(levelDataPath, t_content);
                     }
                 }
@@ -89,6 +91,11 @@ public class SaveManagement : MonoBehaviour
         // if they do exist process the individual files
     }
 
+    public void SaveLevels()
+    {
+        File.WriteAllLines(levelPath, levels);
+    }
+
     // process level load file stuff
     void ProcessLevels()
     {
@@ -100,6 +107,52 @@ public class SaveManagement : MonoBehaviour
         }
     }
 
+    public void UnlockLevel(string a)
+    {
+        if(int.Parse(a) > levels.Count)
+        {
+            return;
+        }
+        for(int i = 0; i < levels.Count; ++i)
+        {
+            // split string
+            string[] t_info = levels[i].Split(' ');
+            // check string
+            if(t_info[1] == a)
+            {
+                // set the false to true
+                t_info[3] = "true";
+
+                //string t_reBuilt = t_info[0] + " " + t_info[1] + " " + t_info[2] + " " + t_info[3] + " " + t_info[4] + " " + t_info[5] + " " + t_info[6];
+                string t_reBuilt = "";
+                for(int b = 0; b < t_info.Count(); b++)
+                {
+                    t_reBuilt += t_info[b] + " ";
+                }
+                Debug.Log("<color=green>Rebuild string: " + t_reBuilt + "</color>");
+
+                levels[i] = t_reBuilt;
+                File.WriteAllLines(levelPath, levels);
+
+                break;
+            }
+            // if it is equal then put the string together 
+            // re-set levels[i]
+            // rewrite file
+            // break loop
+        }
+    }
+
+    //! awake function will be called when the object awakens
+    public void Awake()
+    {
+        DontDestroyOnLoad(this);
+
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
+    }
 
 
     //! start function will be called on the scene start

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 
 /*! 
@@ -48,14 +49,33 @@ public class BallController : MonoBehaviour
     //! Rigidbody component that stores the rigidbody on that ball
     Rigidbody rb;
 
+    //! shot count will keep track of the shots then will be passed into the correct manager when the level is completed
+    int shotCount = 0;
+
+    //! bool load complete will store if the level has completed loading
+    bool loadComplete = false;
+
+    //! shotcounttext is the text that shows the player the shot count
+    TMP_Text shotcounttext;
 
     //! Start called at the start of the scene
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
         line = GameObject.Find("LineObject").GetComponent<LineRenderer>();
+        StartCoroutine(DisableShootingForSeconds(1));
+        shotcounttext = GameObject.Find("ShotCounter").GetComponent<TMP_Text>();
     }
 
+    //! disable shooting for seconds (time) will stop the player from shooting for a certain amount of time
+    public IEnumerator DisableShootingForSeconds(float time)
+    {
+        Debug.Log("waiting for " + time + "seconds");
+        loadComplete = false;
+        yield return new WaitForSeconds(time);
+        loadComplete = true;
+        Debug.Log("done waiting");
+    }
 
     //! Update called once per frame
     void Update()
@@ -70,7 +90,7 @@ public class BallController : MonoBehaviour
             canAim = false;
         }
 
-        if (Input.GetMouseButtonDown(0) && !isAiming && canAim && !inHole)
+        if (Input.GetMouseButtonDown(0) && !isAiming && canAim && !inHole && loadComplete)
         {
             // if the player taps / clicks
             isAiming = true;
@@ -140,9 +160,10 @@ public class BallController : MonoBehaviour
             Vector3 t_desPos = new Vector3(holePos.x, holePos.y - 1, holePos.z);
             transform.position = Vector3.Lerp(this.transform.position, t_desPos, Time.deltaTime);
             Destroy(this.gameObject, 1.0f);
+            GameObject.Find("LevelManager").GetComponent<LevelManager>().ShotCount = shotCount;
             // trigger level win.
+            LevelEvents.current.LevelWin();
         }
-
     }
 
 
@@ -154,13 +175,15 @@ public class BallController : MonoBehaviour
     {
         Vector3 dir = (endPos - startPos);
         Debug.Log("Shoot!");
+        shotCount++;
+        shotcounttext.text = shotCount.ToString();
         rb.AddForce(dir * speed);
     }
 
     //! OnTriggerEnter being used when the ball enters a hole
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "hole")
+        if (other.tag == "hole" && rb.velocity.magnitude < maxHoleEnterSpeed)
         {
             Debug.Log(gameObject.name + " has entered " + other.gameObject.name);
             inHole = true;
