@@ -17,6 +17,9 @@ public class BallController : MonoBehaviour
     //! max distance the player can move their finger from the ball (for chargeup)
     public float maxDistance = 3;
 
+    //! float minDistance is the minimum distance the player can drag from the ball before the shot is cancelled
+    public float minDistance = 0.65f;
+
     //! ball speed
     public float speed = 4;
 
@@ -54,6 +57,9 @@ public class BallController : MonoBehaviour
 
     //! bool load complete will store if the level has completed loading
     bool loadComplete = false;
+
+    //! bool aimtooclose will be set based off min distance and will say if the aim is too close to the ball
+    bool aimTooClose;
 
     //! shotcounttext is the text that shows the player the shot count
     TMP_Text shotcounttext;
@@ -113,7 +119,7 @@ public class BallController : MonoBehaviour
             Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit camHit;
             if (Physics.Raycast(camRay, out camHit, 100))
-            {
+            {                
                 if (camHit.transform.gameObject.layer == 4)
                     t_newPos = camHit.point;
                 // adding a layermask breaks it..
@@ -133,7 +139,17 @@ public class BallController : MonoBehaviour
                 endPos = this.transform.position + (dir.normalized * maxDistance);
             }
 
+            // Check if distance is too close, if it is then cancel
+            if (Vector3.Distance(startPos, t_newPos) < minDistance)
+            {
+                aimTooClose = true;
+            }
+            else
+            {
+                aimTooClose = false;
+            }
 
+            Debug.Log(Vector3.Distance(startPos, t_newPos));
 
             // line renderer!
 
@@ -150,7 +166,10 @@ public class BallController : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && isAiming)
         {
             // if we let go of mouse while aiming set can aim to true, aiming to false and shoot!
-            Shoot();
+
+            if (!aimTooClose)
+                Shoot();
+            
             isAiming = false;
             canAim = true;
         }

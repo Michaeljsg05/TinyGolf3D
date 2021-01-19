@@ -1,3 +1,2 @@
 - Level data information -
-Level 1 = true BestScore = 2
-Level 2 = true BestScore = 2 
+Level 1 = true BestScore = 1

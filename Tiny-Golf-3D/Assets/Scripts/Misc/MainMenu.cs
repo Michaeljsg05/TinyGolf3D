@@ -22,4 +22,13 @@ public class MainMenu : MonoBehaviour
     {
         a.SetActive(!a.activeSelf);
     }
+
+    private void Start()
+    {
+#if UNITY_ANDROID
+            // if its an android build
+           Screen.orientation = ScreenOrientation.Landscape;
+#endif
+
+    }
 }

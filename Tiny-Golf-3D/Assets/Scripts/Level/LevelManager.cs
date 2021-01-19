@@ -29,7 +29,8 @@ public class LevelManager : MonoBehaviour
     bool newScoreSet;
 
     //! gameobject LevelWinScreen is a reference to the win screen. The player will be shown this after winning the level.
-    GameObject levelWinScreen;
+    [SerializeField]
+    GameObject levelWinScreen = null;
 
     //! float level end transition time defines how long the client should wait before continuing with code. basically letting the transition finish.
     private float LevelEndTransitionTime = 3.0f;
@@ -46,6 +47,18 @@ public class LevelManager : MonoBehaviour
         LevelEvents.current.onLevelLoad += LvlLoaded;
         LevelEvents.current.LevelLoad();
 
+
+        if(levelWinScreen == null)
+        {
+            try
+            {
+                levelWinScreen = GameObject.Find("WinScreen");
+            }
+            catch(System.Exception e)
+            {
+                Debug.Log(e.Message);
+            }
+        }
 
     }
 
@@ -99,10 +112,10 @@ public class LevelManager : MonoBehaviour
 
         // toggle the winScreen
         Debug.Log("Level Completed!");
-        GameObject.Find("WinScreen").GetComponent<Animator>().SetTrigger("HasWon");
+        levelWinScreen.GetComponent<Animator>().SetTrigger("HasWon");
 
         // make a temporary reference to the win manager
-        WinScreenManager t_winManager = GameObject.Find("WinScreen").GetComponent<WinScreenManager>();
+        WinScreenManager t_winManager = levelWinScreen.GetComponent<WinScreenManager>();
         // set the text in the winmanager
         t_winManager.CurrentScore.text = "Current Score: " + ShotCount;
         t_winManager.BestScore.text = "Best Score: " + BestScore;
