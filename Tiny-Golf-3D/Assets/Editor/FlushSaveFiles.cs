@@ -4,6 +4,14 @@ using UnityEngine;
 using System.IO;
 using UnityEditor;
 
+/*! 
+ *  \brief     Flush save files class
+ *  \details   This is an editor tool that will help with removing and resetting save files.
+ *  \author    Michael sansom
+ *  \version   1.0a
+ *  \date      10/12/2020
+ */
+
 public class FlushSaveFiles : EditorWindow
 {
     [MenuItem("Window/FlushSaveFiles")]

@@ -1,2 +1,6 @@
 - Level data information -
-Level 1 = true BestScore = 1
+Level 1 = true BestScore = none 
+Level 2 = false BestScore = none 
+Level 3 = false BestScore = none 
+Level 4 = false BestScore = none 
+Level 5 = true BestScore = none 

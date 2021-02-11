@@ -83,6 +83,9 @@ Inheritance diagram for BallController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:af03678fb43eccf0c08a2bb792a37a7e9"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_controller.html#af03678fb43eccf0c08a2bb792a37a7e9">DisableShootingForSeconds</a> (float time)</td></tr>
+<tr class="memdesc:af03678fb43eccf0c08a2bb792a37a7e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable shooting for seconds (time) will stop the player from shooting for a certain amount of time  <a href="class_ball_controller.html#af03678fb43eccf0c08a2bb792a37a7e9">More...</a><br /></td></tr>
+<tr class="separator:af03678fb43eccf0c08a2bb792a37a7e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac52a2fd500bba349444f819fd70fd1a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_controller.html#ac52a2fd500bba349444f819fd70fd1a5">OnTriggerEnter</a> (Collider other)</td></tr>
 <tr class="memdesc:ac52a2fd500bba349444f819fd70fd1a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">OnTriggerEnter being used when the ball enters a hole.  <a href="class_ball_controller.html#ac52a2fd500bba349444f819fd70fd1a5">More...</a><br /></td></tr>
 <tr class="separator:ac52a2fd500bba349444f819fd70fd1a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -92,12 +95,18 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a129b808a43f9c5b8421a041ed0affc64"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_controller.html#a129b808a43f9c5b8421a041ed0affc64">maxDistance</a> = 3</td></tr>
 <tr class="memdesc:a129b808a43f9c5b8421a041ed0affc64"><td class="mdescLeft">&#160;</td><td class="mdescRight">max distance the player can move their finger from the ball (for chargeup)  <a href="class_ball_controller.html#a129b808a43f9c5b8421a041ed0affc64">More...</a><br /></td></tr>
 <tr class="separator:a129b808a43f9c5b8421a041ed0affc64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84612d3cde0503b8e425e823f67c5503"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_controller.html#a84612d3cde0503b8e425e823f67c5503">minDistance</a> = 1.5f</td></tr>
+<tr class="memdesc:a84612d3cde0503b8e425e823f67c5503"><td class="mdescLeft">&#160;</td><td class="mdescRight">float minDistance is the minimum distance the player can drag from the ball before the shot is cancelled  <a href="class_ball_controller.html#a84612d3cde0503b8e425e823f67c5503">More...</a><br /></td></tr>
+<tr class="separator:a84612d3cde0503b8e425e823f67c5503"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e97136673efb472bdc55f5ed6d461e5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_controller.html#a2e97136673efb472bdc55f5ed6d461e5">speed</a> = 4</td></tr>
 <tr class="memdesc:a2e97136673efb472bdc55f5ed6d461e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ball speed  <a href="class_ball_controller.html#a2e97136673efb472bdc55f5ed6d461e5">More...</a><br /></td></tr>
 <tr class="separator:a2e97136673efb472bdc55f5ed6d461e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a291698b3110763721d5c9ab231af6985"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_controller.html#a291698b3110763721d5c9ab231af6985">maxHoleEnterSpeed</a> = 3</td></tr>
 <tr class="memdesc:a291698b3110763721d5c9ab231af6985"><td class="mdescLeft">&#160;</td><td class="mdescRight">max speed the ball can be going to enter hole  <a href="class_ball_controller.html#a291698b3110763721d5c9ab231af6985">More...</a><br /></td></tr>
 <tr class="separator:a291698b3110763721d5c9ab231af6985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec62fca7e9900adf19b9662dcc6c7eb0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_controller.html#aec62fca7e9900adf19b9662dcc6c7eb0">lockAim</a> = false</td></tr>
+<tr class="memdesc:aec62fca7e9900adf19b9662dcc6c7eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool stores aim lock (for pausing)  <a href="class_ball_controller.html#aec62fca7e9900adf19b9662dcc6c7eb0">More...</a><br /></td></tr>
+<tr class="separator:aec62fca7e9900adf19b9662dcc6c7eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -143,6 +152,21 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a68dbed74d54e265094667ec25d7d22e1"><td class="memItemLeft" align="right" valign="top">Rigidbody&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_controller.html#a68dbed74d54e265094667ec25d7d22e1">rb</a></td></tr>
 <tr class="memdesc:a68dbed74d54e265094667ec25d7d22e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rigidbody component that stores the rigidbody on that ball.  <a href="class_ball_controller.html#a68dbed74d54e265094667ec25d7d22e1">More...</a><br /></td></tr>
 <tr class="separator:a68dbed74d54e265094667ec25d7d22e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa38120c326b2b0a1d4b51ed4a59dd18"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_controller.html#aaa38120c326b2b0a1d4b51ed4a59dd18">shotCount</a> = 0</td></tr>
+<tr class="memdesc:aaa38120c326b2b0a1d4b51ed4a59dd18"><td class="mdescLeft">&#160;</td><td class="mdescRight">shot count will keep track of the shots then will be passed into the correct manager when the level is completed  <a href="class_ball_controller.html#aaa38120c326b2b0a1d4b51ed4a59dd18">More...</a><br /></td></tr>
+<tr class="separator:aaa38120c326b2b0a1d4b51ed4a59dd18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa80be22b60ab589a325bf1ea701f7dfb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_controller.html#aa80be22b60ab589a325bf1ea701f7dfb">loadComplete</a> = false</td></tr>
+<tr class="memdesc:aa80be22b60ab589a325bf1ea701f7dfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool load complete will store if the level has completed loading  <a href="class_ball_controller.html#aa80be22b60ab589a325bf1ea701f7dfb">More...</a><br /></td></tr>
+<tr class="separator:aa80be22b60ab589a325bf1ea701f7dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1132d88643b888a942bb552ea80291cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_controller.html#a1132d88643b888a942bb552ea80291cc">aimTooClose</a></td></tr>
+<tr class="memdesc:a1132d88643b888a942bb552ea80291cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool aimtooclose will be set based off min distance and will say if the aim is too close to the ball  <a href="class_ball_controller.html#a1132d88643b888a942bb552ea80291cc">More...</a><br /></td></tr>
+<tr class="separator:a1132d88643b888a942bb552ea80291cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe0bef21e091dd58414fa78aac5064e7"><td class="memItemLeft" align="right" valign="top">TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_controller.html#afe0bef21e091dd58414fa78aac5064e7">shotcounttext</a></td></tr>
+<tr class="memdesc:afe0bef21e091dd58414fa78aac5064e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">shotcounttext is the text that shows the player the shot count  <a href="class_ball_controller.html#afe0bef21e091dd58414fa78aac5064e7">More...</a><br /></td></tr>
+<tr class="separator:afe0bef21e091dd58414fa78aac5064e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f02142b9acc93233757da436ea7664"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ball_controller.html#aa9f02142b9acc93233757da436ea7664">initTapPos</a></td></tr>
+<tr class="memdesc:aa9f02142b9acc93233757da436ea7664"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector that stores initial tap position  <a href="class_ball_controller.html#aa9f02142b9acc93233757da436ea7664">More...</a><br /></td></tr>
+<tr class="separator:aa9f02142b9acc93233757da436ea7664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Ball Controller Class. </p>
@@ -150,6 +174,34 @@ Private Attributes</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.3b </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>5/11/2020 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af03678fb43eccf0c08a2bb792a37a7e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af03678fb43eccf0c08a2bb792a37a7e9">&#9670;&nbsp;</a></span>DisableShootingForSeconds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator BallController.DisableShootingForSeconds </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>disable shooting for seconds (time) will stop the player from shooting for a certain amount of time </p>
+
+</div>
+</div>
 <a id="ac52a2fd500bba349444f819fd70fd1a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac52a2fd500bba349444f819fd70fd1a5">&#9670;&nbsp;</a></span>OnTriggerEnter()</h2>
 
@@ -261,6 +313,30 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1132d88643b888a942bb552ea80291cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1132d88643b888a942bb552ea80291cc">&#9670;&nbsp;</a></span>aimTooClose</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BallController.aimTooClose</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bool aimtooclose will be set based off min distance and will say if the aim is too close to the ball </p>
+
+</div>
+</div>
 <a id="a923b1d2f983487bc649e3263ad810532"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a923b1d2f983487bc649e3263ad810532">&#9670;&nbsp;</a></span>canAim</h2>
 
@@ -381,6 +457,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aa9f02142b9acc93233757da436ea7664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9f02142b9acc93233757da436ea7664">&#9670;&nbsp;</a></span>initTapPos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 BallController.initTapPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>vector that stores initial tap position </p>
+
+</div>
+</div>
 <a id="a6d86d7de786166b553cd26a58bf1ae76"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d86d7de786166b553cd26a58bf1ae76">&#9670;&nbsp;</a></span>isAiming</h2>
 
@@ -453,6 +553,46 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aa80be22b60ab589a325bf1ea701f7dfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa80be22b60ab589a325bf1ea701f7dfb">&#9670;&nbsp;</a></span>loadComplete</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BallController.loadComplete = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bool load complete will store if the level has completed loading </p>
+
+</div>
+</div>
+<a id="aec62fca7e9900adf19b9662dcc6c7eb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec62fca7e9900adf19b9662dcc6c7eb0">&#9670;&nbsp;</a></span>lockAim</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BallController.lockAim = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>bool stores aim lock (for pausing) </p>
+
+</div>
+</div>
 <a id="a129b808a43f9c5b8421a041ed0affc64"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a129b808a43f9c5b8421a041ed0affc64">&#9670;&nbsp;</a></span>maxDistance</h2>
 
@@ -485,6 +625,22 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a84612d3cde0503b8e425e823f67c5503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84612d3cde0503b8e425e823f67c5503">&#9670;&nbsp;</a></span>minDistance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float BallController.minDistance = 1.5f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>float minDistance is the minimum distance the player can drag from the ball before the shot is cancelled </p>
+
+</div>
+</div>
 <a id="a68dbed74d54e265094667ec25d7d22e1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a68dbed74d54e265094667ec25d7d22e1">&#9670;&nbsp;</a></span>rb</h2>
 
@@ -506,6 +662,54 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Rigidbody component that stores the rigidbody on that ball. </p>
+
+</div>
+</div>
+<a id="aaa38120c326b2b0a1d4b51ed4a59dd18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa38120c326b2b0a1d4b51ed4a59dd18">&#9670;&nbsp;</a></span>shotCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BallController.shotCount = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>shot count will keep track of the shots then will be passed into the correct manager when the level is completed </p>
+
+</div>
+</div>
+<a id="afe0bef21e091dd58414fa78aac5064e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe0bef21e091dd58414fa78aac5064e7">&#9670;&nbsp;</a></span>shotcounttext</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMP_Text BallController.shotcounttext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>shotcounttext is the text that shows the player the shot count </p>
 
 </div>
 </div>

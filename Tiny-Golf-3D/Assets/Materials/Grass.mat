@@ -88,8 +88,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_6469C5D2: {r: 0.3915094, g: 1, b: 0.412354, a: 0}
-    - Color_7A738107: {r: 0, g: 0.6943345, b: 1, a: 0}
-    - Color_9DA637E3: {r: 0, g: 1, b: 0.00427413, a: 0}
+    - Color_7A738107: {r: 0.3921569, g: 1, b: 0.41176474, a: 0}
+    - Color_9DA637E3: {r: 0.3921569, g: 1, b: 0.41176474, a: 0}
     - _BaseColor: {r: 0.5582274, g: 1, b: 0.4481132, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

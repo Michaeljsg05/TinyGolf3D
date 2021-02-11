@@ -18,7 +18,7 @@ public class BallController : MonoBehaviour
     public float maxDistance = 3;
 
     //! float minDistance is the minimum distance the player can drag from the ball before the shot is cancelled
-    public float minDistance = 0.65f;
+    public float minDistance = 1.5f;
 
     //! ball speed
     public float speed = 4;
@@ -35,6 +35,9 @@ public class BallController : MonoBehaviour
     bool isMoving;
     //! bool stores if the player can aim
     bool canAim;
+
+    //! bool stores aim lock (for pausing)
+    public bool lockAim = false;
 
     //! bool stores if the player is in the hole
     bool inHole;
@@ -64,6 +67,9 @@ public class BallController : MonoBehaviour
     //! shotcounttext is the text that shows the player the shot count
     TMP_Text shotcounttext;
 
+    //! vector that stores initial tap position
+    Vector3 initTapPos;
+
     //! Start called at the start of the scene
     void Start()
     {
@@ -87,7 +93,7 @@ public class BallController : MonoBehaviour
     void Update()
     {
 
-        if (rb.velocity.magnitude <= 0.1f) // if the ball has stopped (0.1f instead of 0 because it will never be exactually at 0)
+        if (rb.velocity.magnitude <= 0.1f && !lockAim) // if the ball has stopped (0.1f instead of 0 because it will never be exactually at 0)
         {
             canAim = true;
         }
@@ -101,6 +107,11 @@ public class BallController : MonoBehaviour
             // if the player taps / clicks
             isAiming = true;
             canAim = false;
+
+            // set init tap pos to mouse pos
+            initTapPos = Input.mousePosition;
+
+
         }
         if (isAiming)
         {
@@ -119,7 +130,7 @@ public class BallController : MonoBehaviour
             Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit camHit;
             if (Physics.Raycast(camRay, out camHit, 100))
-            {                
+            {
                 if (camHit.transform.gameObject.layer == 4)
                     t_newPos = camHit.point;
                 // adding a layermask breaks it..
@@ -149,7 +160,6 @@ public class BallController : MonoBehaviour
                 aimTooClose = false;
             }
 
-            Debug.Log(Vector3.Distance(startPos, t_newPos));
 
             // line renderer!
 
@@ -163,26 +173,38 @@ public class BallController : MonoBehaviour
             line.enabled = false;
         }
 
-        if (Input.GetMouseButtonUp(0) && isAiming)
+        if (Input.GetMouseButtonUp(0) && isAiming && !lockAim)
         {
             // if we let go of mouse while aiming set can aim to true, aiming to false and shoot!
 
-            if (!aimTooClose)
+            // check if the position is the same as initital position
+            if (Input.mousePosition != initTapPos && !aimTooClose)
                 Shoot();
-            
+
             isAiming = false;
             canAim = true;
         }
 
+        if (lockAim)
+        {
+            isAiming = false;
+            canAim = false;
+        }
+
         if (inHole)
         {
+            // make sure the pause menu cannot be opened
+            GameObject.Find("PauseMenu").GetComponent<PauseMenu>().canPause = false;
+            Debug.Log("Pause triggered");
             Vector3 t_desPos = new Vector3(holePos.x, holePos.y - 1, holePos.z);
             transform.position = Vector3.Lerp(this.transform.position, t_desPos, Time.deltaTime);
             Destroy(this.gameObject, 1.0f);
             GameObject.Find("LevelManager").GetComponent<LevelManager>().ShotCount = shotCount;
+            Debug.Log("Level over");
             // trigger level win.
             LevelEvents.current.LevelWin();
         }
+
     }
 
 
@@ -209,6 +231,16 @@ public class BallController : MonoBehaviour
             rb.velocity = Vector3.zero;
             rb.isKinematic = true;
             holePos = other.transform.position;
+        }
+        if (other.tag == "SpeedPad")
+        {
+            Debug.Log("Hit Speedpad");
+            rb.velocity *= 2;
+        }
+        if (other.tag == "JumpPad")
+        {
+            Debug.Log("Hit JumpPad");
+            rb.AddForce(new Vector3(0, 30, 0), ForceMode.Impulse);
         }
     }
 

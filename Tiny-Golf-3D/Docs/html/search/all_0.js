@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ball_0',['ball',['../class_level_manager.html#a67b8be8a9ac76fcac81307c582fce571',1,'LevelManager']]],
-  ['ballcontroller_1',['BallController',['../class_ball_controller.html',1,'']]],
-  ['ballcontroller_2ecs_2',['BallController.cs',['../_ball_controller_8cs.html',1,'']]]
+  ['aimtooclose_0',['aimTooClose',['../class_ball_controller.html#a1132d88643b888a942bb552ea80291cc',1,'BallController']]],
+  ['aspectoffset_1',['aspectOffset',['../class_camera_manager.html#a4616fcd74cbf06518b2ac0d8fae9678d',1,'CameraManager']]],
+  ['awake_2',['Awake',['../class_level_events.html#a3024aa85ab9396f51aa97dcbb44af0aa',1,'LevelEvents.Awake()'],['../class_ball_manager.html#a586673fce74e5010c159e682b073b9e7',1,'BallManager.Awake()'],['../class_save_management.html#a6cea916e96078164a606cec9cb742133',1,'SaveManagement.Awake()']]]
 ];

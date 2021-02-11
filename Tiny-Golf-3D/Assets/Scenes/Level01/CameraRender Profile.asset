@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   components:
   - {fileID: 3843594331295696776}
-  - {fileID: 4733758687744149386}
-  - {fileID: 8714289692249060682}
 --- !u!114 &3843594331295696776
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -32,7 +30,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.1541919, g: 0.3082436, b: 0.31132078, a: 1}
+    m_Value: {r: 0.21586867, g: 0.31132078, b: 0.31132078, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -41,7 +39,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.205
+    m_Value: 0.285
     min: 0
     max: 1
   smoothness:
@@ -50,82 +48,5 @@ MonoBehaviour:
     min: 0.01
     max: 1
   rounded:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
---- !u!114 &4733758687744149386
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
-  m_Name: Bloom
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  threshold:
-    m_OverrideState: 1
-    m_Value: 1.49
-    min: 0
-  intensity:
-    m_OverrideState: 1
-    m_Value: 1.03
-    min: 0
-  scatter:
-    m_OverrideState: 0
-    m_Value: 0.63
-    min: 0
-    max: 1
-  clamp:
-    m_OverrideState: 0
-    m_Value: 65472
-    min: 0
-  tint:
-    m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
-    hdr: 0
-    showAlpha: 0
-    showEyeDropper: 1
-  highQualityFiltering:
-    m_OverrideState: 0
-    m_Value: 0
-  dirtTexture:
-    m_OverrideState: 1
-    m_Value: {fileID: 2800000, guid: e693144baac21b44393bc24587e1c127, type: 3}
-  dirtIntensity:
-    m_OverrideState: 1
-    m_Value: 75.64
-    min: 0
---- !u!114 &8714289692249060682
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccf1aba9553839d41ae37dd52e9ebcce, type: 3}
-  m_Name: MotionBlur
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  mode:
-    m_OverrideState: 0
-    m_Value: 0
-  quality:
-    m_OverrideState: 1
-    m_Value: 0
-  intensity:
-    m_OverrideState: 1
-    m_Value: 1
-    min: 0
-    max: 1
-  clamp:
-    m_OverrideState: 0
-    m_Value: 0.05
-    min: 0
-    max: 0.2

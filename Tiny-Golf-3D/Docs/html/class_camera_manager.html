@@ -94,6 +94,18 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a2af3f39faccea334d7f16360c3e40c3e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_manager.html#a2af3f39faccea334d7f16360c3e40c3e">zoomSmooth</a> = 1.5f</td></tr>
 <tr class="memdesc:a2af3f39faccea334d7f16360c3e40c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">float zoom smooth is the smoothing time factor.  <a href="class_camera_manager.html#a2af3f39faccea334d7f16360c3e40c3e">More...</a><br /></td></tr>
 <tr class="separator:a2af3f39faccea334d7f16360c3e40c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e59bb20091de3383343d5a8e2dc61bd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_manager.html#a9e59bb20091de3383343d5a8e2dc61bd">zoomOffset</a> = 5.0f</td></tr>
+<tr class="memdesc:a9e59bb20091de3383343d5a8e2dc61bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">float Zoom Offset is the amount the zoom will be changed by the player input  <a href="class_camera_manager.html#a9e59bb20091de3383343d5a8e2dc61bd">More...</a><br /></td></tr>
+<tr class="separator:a9e59bb20091de3383343d5a8e2dc61bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cce29efe95f4739be3f17c852eb73d8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_manager.html#a3cce29efe95f4739be3f17c852eb73d8">zoomOffsetMin</a> = 3.0f</td></tr>
+<tr class="memdesc:a3cce29efe95f4739be3f17c852eb73d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">float Zoom Offset Min is the min amount the zoom can be changed by the player input  <a href="class_camera_manager.html#a3cce29efe95f4739be3f17c852eb73d8">More...</a><br /></td></tr>
+<tr class="separator:a3cce29efe95f4739be3f17c852eb73d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5883e073905337fab2496db68ac4730"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_manager.html#af5883e073905337fab2496db68ac4730">zoomOffsetMax</a> = 10.0f</td></tr>
+<tr class="memdesc:af5883e073905337fab2496db68ac4730"><td class="mdescLeft">&#160;</td><td class="mdescRight">float Zoom Offset Max is the Max amount the zoom can be changed by the player input  <a href="class_camera_manager.html#af5883e073905337fab2496db68ac4730">More...</a><br /></td></tr>
+<tr class="separator:af5883e073905337fab2496db68ac4730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4616fcd74cbf06518b2ac0d8fae9678d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_manager.html#a4616fcd74cbf06518b2ac0d8fae9678d">aspectOffset</a></td></tr>
+<tr class="memdesc:a4616fcd74cbf06518b2ac0d8fae9678d"><td class="mdescLeft">&#160;</td><td class="mdescRight">float aspect offset will be how much the camera zooms in or out by default depending on the screen size  <a href="class_camera_manager.html#a4616fcd74cbf06518b2ac0d8fae9678d">More...</a><br /></td></tr>
+<tr class="separator:a4616fcd74cbf06518b2ac0d8fae9678d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -171,6 +183,23 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a4616fcd74cbf06518b2ac0d8fae9678d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4616fcd74cbf06518b2ac0d8fae9678d">&#9670;&nbsp;</a></span>aspectOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraManager.aspectOffset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>float aspect offset will be how much the camera zooms in or out by default depending on the screen size </p>
+<p>the aspect offset will be how much the camera zooms in or out by default depending on the screensize of the device that the user is on. </p>
+
+</div>
+</div>
 <a id="a8ad70906338c152ba9884c6248f1c35f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ad70906338c152ba9884c6248f1c35f">&#9670;&nbsp;</a></span>levelManager</h2>
 
@@ -293,6 +322,57 @@ Private Attributes</h2></td></tr>
 
 <p>Camera overlay camera stores a reference to the overlay camera. </p>
 <p>This camera is used to lock alignment with the playercamera and keep overlaying images such as ui drawn on top of the game. </p>
+
+</div>
+</div>
+<a id="a9e59bb20091de3383343d5a8e2dc61bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e59bb20091de3383343d5a8e2dc61bd">&#9670;&nbsp;</a></span>zoomOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraManager.zoomOffset = 5.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>float Zoom Offset is the amount the zoom will be changed by the player input </p>
+<p>the zoom offset will be how much the zoom is offset when the player zooms in or out </p>
+
+</div>
+</div>
+<a id="af5883e073905337fab2496db68ac4730"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5883e073905337fab2496db68ac4730">&#9670;&nbsp;</a></span>zoomOffsetMax</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraManager.zoomOffsetMax = 10.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>float Zoom Offset Max is the Max amount the zoom can be changed by the player input </p>
+<p>The zoom offset max is the maximum amount the zoom can be affected by player zooming in and out </p>
+
+</div>
+</div>
+<a id="a3cce29efe95f4739be3f17c852eb73d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cce29efe95f4739be3f17c852eb73d8">&#9670;&nbsp;</a></span>zoomOffsetMin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraManager.zoomOffsetMin = 3.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>float Zoom Offset Min is the min amount the zoom can be changed by the player input </p>
+<p>The zoom offset min is the minimum amount the zoom can be affected by player zooming in and out </p>
 
 </div>
 </div>

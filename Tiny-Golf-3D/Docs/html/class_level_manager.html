@@ -64,6 +64,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_level_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">LevelManager Class Reference</div>  </div>
@@ -87,15 +88,42 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a67b8be8a9ac76fcac81307c582fce571"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level_manager.html#a67b8be8a9ac76fcac81307c582fce571">ball</a></td></tr>
 <tr class="memdesc:a67b8be8a9ac76fcac81307c582fce571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gameobject ball is a reference to the ball object.  <a href="class_level_manager.html#a67b8be8a9ac76fcac81307c582fce571">More...</a><br /></td></tr>
 <tr class="separator:a67b8be8a9ac76fcac81307c582fce571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05196a81ada4fc50a9d9a223b4ef21ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level_manager.html#a05196a81ada4fc50a9d9a223b4ef21ab">ShotCount</a> = -1</td></tr>
+<tr class="memdesc:a05196a81ada4fc50a9d9a223b4ef21ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Int ShotCount is the amount of times the player has shot the ball.  <a href="class_level_manager.html#a05196a81ada4fc50a9d9a223b4ef21ab">More...</a><br /></td></tr>
+<tr class="separator:a05196a81ada4fc50a9d9a223b4ef21ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85411a8e9f1647950502ba297e05f308"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level_manager.html#a85411a8e9f1647950502ba297e05f308">BestScore</a> = -1</td></tr>
+<tr class="memdesc:a85411a8e9f1647950502ba297e05f308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Int best score is the best score for this level.  <a href="class_level_manager.html#a85411a8e9f1647950502ba297e05f308">More...</a><br /></td></tr>
+<tr class="separator:a85411a8e9f1647950502ba297e05f308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72a7e048622c9986750c111dfb404e61"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level_manager.html#a72a7e048622c9986750c111dfb404e61">defaultBall</a></td></tr>
+<tr class="memdesc:a72a7e048622c9986750c111dfb404e61"><td class="mdescLeft">&#160;</td><td class="mdescRight">gameobject default ball is the ball that will be spawned if the ball manager cannot be founed.  <a href="class_level_manager.html#a72a7e048622c9986750c111dfb404e61">More...</a><br /></td></tr>
+<tr class="separator:a72a7e048622c9986750c111dfb404e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c7d4a9cbc5ef80e3f9d0fb1da12f1d"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level_manager.html#ab3c7d4a9cbc5ef80e3f9d0fb1da12f1d">ballSpawnPosition</a></td></tr>
+<tr class="memdesc:ab3c7d4a9cbc5ef80e3f9d0fb1da12f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Where the ball will spawn at the start of the level.  <a href="class_level_manager.html#ab3c7d4a9cbc5ef80e3f9d0fb1da12f1d">More...</a><br /></td></tr>
+<tr class="separator:ab3c7d4a9cbc5ef80e3f9d0fb1da12f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:afcd5c1d3d30954925d73f22ec1d0ecce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level_manager.html#afcd5c1d3d30954925d73f22ec1d0ecce">Start</a> ()</td></tr>
 <tr class="memdesc:afcd5c1d3d30954925d73f22ec1d0ecce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start is called before the first frame update.  <a href="class_level_manager.html#afcd5c1d3d30954925d73f22ec1d0ecce">More...</a><br /></td></tr>
 <tr class="separator:afcd5c1d3d30954925d73f22ec1d0ecce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a874b53f003bb10ede09e45fc34da4db9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level_manager.html#a874b53f003bb10ede09e45fc34da4db9">Update</a> ()</td></tr>
-<tr class="memdesc:a874b53f003bb10ede09e45fc34da4db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update is called once per frame.  <a href="class_level_manager.html#a874b53f003bb10ede09e45fc34da4db9">More...</a><br /></td></tr>
-<tr class="separator:a874b53f003bb10ede09e45fc34da4db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f81032d812662698d2efbb0b239fc0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level_manager.html#a1f81032d812662698d2efbb0b239fc0b">OnWin</a> ()</td></tr>
+<tr class="separator:a1f81032d812662698d2efbb0b239fc0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c6ce318ade4675f68eb29480028790"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level_manager.html#a45c6ce318ade4675f68eb29480028790">LvlLoaded</a> ()</td></tr>
+<tr class="separator:a45c6ce318ade4675f68eb29480028790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a326dd00df1da3870c318e5eac8320355"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level_manager.html#a326dd00df1da3870c318e5eac8320355">LvlEnd</a> ()</td></tr>
+<tr class="separator:a326dd00df1da3870c318e5eac8320355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:adfd2ffc7476385d99c11af7fb14e4cbb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level_manager.html#adfd2ffc7476385d99c11af7fb14e4cbb">newScoreSet</a></td></tr>
+<tr class="memdesc:adfd2ffc7476385d99c11af7fb14e4cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool New score set will be used to tell the player if a new best score was set  <a href="class_level_manager.html#adfd2ffc7476385d99c11af7fb14e4cbb">More...</a><br /></td></tr>
+<tr class="separator:adfd2ffc7476385d99c11af7fb14e4cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36dc40f738d51340c18075e1f3aabd86"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level_manager.html#a36dc40f738d51340c18075e1f3aabd86">levelWinScreen</a> = null</td></tr>
+<tr class="memdesc:a36dc40f738d51340c18075e1f3aabd86"><td class="mdescLeft">&#160;</td><td class="mdescRight">gameobject LevelWinScreen is a reference to the win screen. The player will be shown this after winning the level.  <a href="class_level_manager.html#a36dc40f738d51340c18075e1f3aabd86">More...</a><br /></td></tr>
+<tr class="separator:a36dc40f738d51340c18075e1f3aabd86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8897749378eb38c9c58e7e8b048e9415"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level_manager.html#a8897749378eb38c9c58e7e8b048e9415">LevelEndTransitionTime</a> = 3.0f</td></tr>
+<tr class="memdesc:a8897749378eb38c9c58e7e8b048e9415"><td class="mdescLeft">&#160;</td><td class="mdescRight">float level end transition time defines how long the client should wait before continuing with code. basically letting the transition finish.  <a href="class_level_manager.html#a8897749378eb38c9c58e7e8b048e9415">More...</a><br /></td></tr>
+<tr class="separator:a8897749378eb38c9c58e7e8b048e9415"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Level Manager. </p>
@@ -103,6 +131,81 @@ Private Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0a </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>5/11/2020 </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a326dd00df1da3870c318e5eac8320355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a326dd00df1da3870c318e5eac8320355">&#9670;&nbsp;</a></span>LvlEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LevelManager.LvlEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45c6ce318ade4675f68eb29480028790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45c6ce318ade4675f68eb29480028790">&#9670;&nbsp;</a></span>LvlLoaded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LevelManager.LvlLoaded </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f81032d812662698d2efbb0b239fc0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f81032d812662698d2efbb0b239fc0b">&#9670;&nbsp;</a></span>OnWin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LevelManager.OnWin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="afcd5c1d3d30954925d73f22ec1d0ecce"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afcd5c1d3d30954925d73f22ec1d0ecce">&#9670;&nbsp;</a></span>Start()</h2>
 
@@ -130,33 +233,6 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a874b53f003bb10ede09e45fc34da4db9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a874b53f003bb10ede09e45fc34da4db9">&#9670;&nbsp;</a></span>Update()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LevelManager.Update </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Update is called once per frame. </p>
-
-</div>
-</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a67b8be8a9ac76fcac81307c582fce571"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a67b8be8a9ac76fcac81307c582fce571">&#9670;&nbsp;</a></span>ball</h2>
@@ -174,6 +250,54 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ab3c7d4a9cbc5ef80e3f9d0fb1da12f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c7d4a9cbc5ef80e3f9d0fb1da12f1d">&#9670;&nbsp;</a></span>ballSpawnPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform LevelManager.ballSpawnPosition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Where the ball will spawn at the start of the level. </p>
+
+</div>
+</div>
+<a id="a85411a8e9f1647950502ba297e05f308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85411a8e9f1647950502ba297e05f308">&#9670;&nbsp;</a></span>BestScore</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LevelManager.BestScore = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Int best score is the best score for this level. </p>
+
+</div>
+</div>
+<a id="a72a7e048622c9986750c111dfb404e61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72a7e048622c9986750c111dfb404e61">&#9670;&nbsp;</a></span>defaultBall</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject LevelManager.defaultBall</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>gameobject default ball is the ball that will be spawned if the ball manager cannot be founed. </p>
+
+</div>
+</div>
 <a id="a0952e11b4517a1f8b40268b8c05a5cc1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0952e11b4517a1f8b40268b8c05a5cc1">&#9670;&nbsp;</a></span>hole</h2>
 
@@ -187,6 +311,94 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gameobject hole is a reference to the hole object. </p>
+
+</div>
+</div>
+<a id="a8897749378eb38c9c58e7e8b048e9415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8897749378eb38c9c58e7e8b048e9415">&#9670;&nbsp;</a></span>LevelEndTransitionTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LevelManager.LevelEndTransitionTime = 3.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>float level end transition time defines how long the client should wait before continuing with code. basically letting the transition finish. </p>
+
+</div>
+</div>
+<a id="a36dc40f738d51340c18075e1f3aabd86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36dc40f738d51340c18075e1f3aabd86">&#9670;&nbsp;</a></span>levelWinScreen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject LevelManager.levelWinScreen = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>gameobject LevelWinScreen is a reference to the win screen. The player will be shown this after winning the level. </p>
+
+</div>
+</div>
+<a id="adfd2ffc7476385d99c11af7fb14e4cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfd2ffc7476385d99c11af7fb14e4cbb">&#9670;&nbsp;</a></span>newScoreSet</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LevelManager.newScoreSet</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bool New score set will be used to tell the player if a new best score was set </p>
+
+</div>
+</div>
+<a id="a05196a81ada4fc50a9d9a223b4ef21ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05196a81ada4fc50a9d9a223b4ef21ab">&#9670;&nbsp;</a></span>ShotCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LevelManager.ShotCount = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Int ShotCount is the amount of times the player has shot the ball. </p>
 
 </div>
 </div>

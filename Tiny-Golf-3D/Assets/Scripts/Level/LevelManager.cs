@@ -25,8 +25,14 @@ public class LevelManager : MonoBehaviour
     //! Int best score is the best score for this level
     public int BestScore = -1;
 
+    //! gameobject default ball is the ball that will be spawned if the ball manager cannot be founed.
+    public GameObject defaultBall;
+
     //! bool New score set will be used to tell the player if a new best score was set
     bool newScoreSet;
+
+    //! Where the ball will spawn at the start of the level
+    public Transform ballSpawnPosition;
 
     //! gameobject LevelWinScreen is a reference to the win screen. The player will be shown this after winning the level.
     [SerializeField]
@@ -39,8 +45,25 @@ public class LevelManager : MonoBehaviour
     //! Start is called before the first frame update
     void Start()
     {
+
+       if(BallManager.instance != null)
+        {
+
+            Debug.Log("<color=green>The ball manager instance has been found! spawning the selected ball.</color>");
+            GameObject newBall = GameObject.Instantiate(BallManager.instance.GetBall(), ballSpawnPosition);
+            ball = newBall;
+
+            ball.transform.SetParent(null);
+        }
+       else
+        {
+            Debug.Log("<color=red>The Ball mamnager instance could not be found. spawning the default ball instead.</color>");
+            ball = GameObject.Instantiate(defaultBall, ballSpawnPosition);
+            ball.transform.SetParent(null);
+        }
+
+
         hole = GameObject.Find("Hole");
-        ball = GameObject.Find("Ball");
         LevelEvents.current.onLevelWin += OnWin;
         LevelEvents.current.onLevelEnd += LvlEnd;
 

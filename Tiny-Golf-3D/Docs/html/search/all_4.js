@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['inhole_10',['inHole',['../class_ball_controller.html#a422e811c56b6a06d458c0d7c8f0f79bd',1,'BallController']]],
-  ['isaiming_11',['isAiming',['../class_ball_controller.html#a6d86d7de786166b553cd26a58bf1ae76',1,'BallController']]],
-  ['ismoving_12',['isMoving',['../class_ball_controller.html#aec05933ddf65edba398561a3ebf5e95a',1,'BallController']]]
+  ['endpos_24',['endPos',['../class_ball_controller.html#ac69140bcebc2a87cf5643c61f1efe253',1,'BallController']]]
 ];

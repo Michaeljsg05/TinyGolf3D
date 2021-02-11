@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['shoot_25',['Shoot',['../class_ball_controller.html#a200e6d49d0ef90f63d9bcfdf55d54175',1,'BallController']]],
-  ['speed_26',['speed',['../class_ball_controller.html#a2e97136673efb472bdc55f5ed6d461e5',1,'BallController']]],
-  ['start_27',['Start',['../class_level_manager.html#afcd5c1d3d30954925d73f22ec1d0ecce',1,'LevelManager.Start()'],['../class_camera_manager.html#a5010f55d95e2b09bf041387388a38ec1',1,'CameraManager.Start()'],['../class_ball_controller.html#a242683fa6f5b6282cb88b38312d4798a',1,'BallController.Start()']]],
-  ['startpos_28',['startPos',['../class_ball_controller.html#aed8ae3a01cd5505f2ea1391358991257',1,'BallController']]]
+  ['mainlevelcamera_70',['mainLevelCamera',['../class_camera_manager.html#ab6bef31fae3aaee9e13485d3a4719e6a',1,'CameraManager']]],
+  ['mainmenu_71',['MainMenu',['../class_main_menu.html',1,'']]],
+  ['mainmenu_2ecs_72',['MainMenu.cs',['../_main_menu_8cs.html',1,'']]],
+  ['maxdistance_73',['maxDistance',['../class_ball_controller.html#a129b808a43f9c5b8421a041ed0affc64',1,'BallController']]],
+  ['maxholeenterspeed_74',['maxHoleEnterSpeed',['../class_ball_controller.html#a291698b3110763721d5c9ab231af6985',1,'BallController']]],
+  ['mindistance_75',['minDistance',['../class_camera_manager.html#adc56f2d1515a515e596dc29800bcd4db',1,'CameraManager.minDistance()'],['../class_ball_controller.html#a84612d3cde0503b8e425e823f67c5503',1,'BallController.minDistance()']]]
 ];

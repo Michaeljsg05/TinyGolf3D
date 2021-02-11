@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ballcontroller_31',['BallController',['../class_ball_controller.html',1,'']]]
+  ['ballcontroller_133',['BallController',['../class_ball_controller.html',1,'']]],
+  ['ballmanager_134',['BallManager',['../class_ball_manager.html',1,'']]]
 ];

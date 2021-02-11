@@ -54,15 +54,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Misc\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Misc\VersionManager.cs" />
     <Compile Include="Assets\Scripts\UI\LevelPanel.cs" />
     <Compile Include="Assets\Scripts\Level\LevelEvents.cs" />
+    <Compile Include="Assets\Scripts\Misc\LockView.cs" />
     <Compile Include="Assets\Scripts\Player\BallController.cs" />
     <Compile Include="Assets\Scripts\Misc\SaveManagement.cs" />
     <Compile Include="Assets\Scripts\Misc\CameraManager.cs" />
     <Compile Include="Assets\Scripts\Level\LevelManager.cs" />
     <Compile Include="Assets\Scripts\UI\LevelScreen.cs" />
     <Compile Include="Assets\Scripts\UI\WinScreenManager.cs" />
-    <Compile Include="Assets\Scripts\Misc\VersionManager.cs" />
+    <Compile Include="Assets\Scripts\Misc\PerformanceManager.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Misc\SwapText.cs" />
+    <Compile Include="Assets\Scripts\Misc\BallManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

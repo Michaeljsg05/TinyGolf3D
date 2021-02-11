@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hole_8',['hole',['../class_level_manager.html#a0952e11b4517a1f8b40268b8c05a5cc1',1,'LevelManager']]],
-  ['holepos_9',['holePos',['../class_ball_controller.html#a9d1527b644ef09f963039e184021a98a',1,'BallController']]]
+  ['defaultball_22',['defaultBall',['../class_level_manager.html#a72a7e048622c9986750c111dfb404e61',1,'LevelManager']]],
+  ['disableshootingforseconds_23',['DisableShootingForSeconds',['../class_ball_controller.html#af03678fb43eccf0c08a2bb792a37a7e9',1,'BallController']]]
 ];

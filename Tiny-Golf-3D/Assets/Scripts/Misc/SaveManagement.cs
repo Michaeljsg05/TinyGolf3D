@@ -6,6 +6,8 @@ using System.IO;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
+using TMPro;
+
 
 /*! 
  *  \brief     Save Management Class
@@ -29,11 +31,18 @@ public class SaveManagement : MonoBehaviour
    */
     public List<string> levels;
     string levelPath;
+    
 
     void InitFiles()
     {
         // start by getting our data subdirectory
+
+#if UNITY_ANDROID
+        string dataDirectory = Application.persistentDataPath + "/private_data";
+#endif
+#if UNITY_STANDALONE_WIN
         string dataDirectory = Application.dataPath + "/private_data";
+#endif
         Debug.Log("Checking: <color=green>" + dataDirectory + "</color> At: <color=green>" + System.DateTime.Now + "</color>");
         if (!Directory.Exists(dataDirectory))
         {
